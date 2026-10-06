@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أثر | تقرير ولي الأمر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+ :root {
+ --bg: #f6f1e7;
+ --surface: #fffdf8;
+ --ink: #1b2a33;
+ --muted: #5d6b72;
+ --line: #e6dccb;
+ --brand: #1f5e57;
+ --brand-ink: #ffffff;
+ --gold: #c9962b;
+ --good-bg: #e3f1e8; --good-ink: #1e6b3d;
+ --mid-bg: #fbf0d6; --mid-ink: #8a5a0b;
+ --soft-bg: #f6e4dc; --soft-ink: #8f3d24;
+ --shadow: 0 1px 2px rgba(27,42,51,.06), 0 6px 20px rgba(27,42,51,.06);
+ }
+ @media (prefers-color-scheme: dark) {
+ :root {
+ --bg: #10181d; --surface: #172229; --ink: #ecf1f2; --muted: #9fb0b6; --line: #26343c;
+ --brand: #2a7a70; --gold: #e2b75a;
+ --good-bg: #173527; --good-ink: #8fd8ac;
+ --mid-bg: #3a2e12; --mid-ink: #f0cf7c;
+ --soft-bg: #3b231b; --soft-ink: #f1a98d;
+ --shadow: none;
+ }
+ }
+ * { box-sizing: border-box; }
+ html { -webkit-text-size-adjust: 100%; }
+ body {
+ margin: 0; background: var(--bg); color: var(--ink);
+ font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif; font-size: 17px; line-height: 1.7;
+ }
+ .wrap { max-width: 760px; margin: 0 auto; padding: 20px 16px 48px; }
+
+ header.top {
+ background: var(--brand); color: var(--brand-ink);
+ border-radius: 20px; padding: 22px 22px 20px; position: relative; overflow: hidden;
+ }
+ header.top::after {
+ content: ""; position: absolute; inset-inline-start: -40px; bottom: -60px; width: 180px; height: 180px;
+ border-radius: 50%; border: 18px solid rgba(255,255,255,.07);
+ }
+ .brand { font-family: "Noto Naskh Arabic", serif; font-weight: 700; font-size: 34px; line-height: 1; margin: 0; }
+ .brand small { font-family: "Tajawal", sans-serif; font-size: 16px; font-weight: 500; opacity: .85; margin-inline-start: 10px; }
+ .sub { margin: 10px 0 0; opacity: .9; font-size: 15px; }
+ .code { display: inline-block; margin-top: 12px; font-size: 13px; background: rgba(255,255,255,.14); padding: 3px 10px; border-radius: 999px; unicode-bidi: plaintext; }
+
+ .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0 6px; }
+ .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; box-shadow: var(--shadow); }
+ .stat .k { color: var(--muted); font-size: 13px; }
+ .stat .v { font-size: 20px; font-weight: 800; margin-top: 2px; }
+
+ h2.sec { font-size: 15px; color: var(--muted); font-weight: 700; margin: 26px 4px 10px; letter-spacing: .2px; }
+
+ #app > .card:first-child { margin-top: 16px; }
+ .card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 20px; box-shadow: var(--shadow); margin-bottom: 14px; }
+ .card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+ .card h3 { margin: 0; font-size: 21px; font-weight: 800; }
+ .value { font-size: 13px; color: var(--gold); font-weight: 700; border: 1px solid currentColor; border-radius: 999px; padding: 1px 10px; }
+ .story { color: var(--muted); margin: 8px 0 16px; font-size: 15px; }
+
+ .badge { display: inline-block; font-size: 14px; font-weight: 700; padding: 3px 12px; border-radius: 999px; white-space: nowrap; }
+ .t-good { background: var(--good-bg); color: var(--good-ink); }
+ .t-mid { background: var(--mid-bg); color: var(--mid-ink); }
+ .t-soft { background: var(--soft-bg); color: var(--soft-ink); }
+
+ .block { border-top: 1px dashed var(--line); padding-top: 14px; margin-top: 14px; }
+ .block .lbl { font-size: 13px; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
+ .block p { margin: 0; }
+ .hadith { font-family: "Noto Naskh Arabic", serif; font-size: 19px; line-height: 2; background: var(--bg); border-radius: 14px; padding: 12px 16px; }
+ .hadith .src { display: block; font-family: "Tajawal", sans-serif; font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+ ol.history { list-style: none; margin: 0; padding: 0; }
+ ol.history li { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+ ol.history li:last-child { border-bottom: 0; }
+ ol.history time { color: var(--muted); font-size: 14px; }
+
+ .state { text-align: center; padding: 34px 20px; }
+ .state h3 { margin: 0 0 6px; font-size: 20px; }
+ .state p { margin: 0 auto; color: var(--muted); max-width: 440px; }
+ button.retry { margin-top: 16px; font: inherit; font-weight: 700; color: var(--brand-ink); background: var(--brand); border: 0; border-radius: 12px; padding: 10px 22px; cursor: pointer; }
+ button.retry:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+ .skel { height: 18px; border-radius: 8px; background: linear-gradient(90deg, var(--line), transparent, var(--line)); background-size: 200% 100%; animation: sh 1.4s infinite linear; margin: 10px 0; }
+ @keyframes sh { to { background-position: -200% 0; } }
+ @media (prefers-reduced-motion: reduce) { .skel { animation: none; } }
+
+ footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 28px; }
+ .demo-note { background: var(--mid-bg); color: var(--mid-ink); border-radius: 12px; padding: 8px 14px; font-size: 14px; margin-top: 14px; }
+ @media (max-width: 480px) {
+ .stats { grid-template-columns: 1fr 1fr; }
+ .stats .stat:last-child { grid-column: span 2; }
+ .brand { font-size: 30px; }
+ }
+</style>
+</head>
+<body>
+<div class="wrap">
+ <header class="top">
+ <h1 class="brand">أثر<small>تقرير ولي الأمر</small></h1>
+ <p class="sub">ما مرّ به طفلك في اللعبة، وكيف تكملون الحديث معه في البيت.</p>
+ <span class="code" id="code" hidden></span>
+ </header>
+ <div id="demoNote" class="demo-note" hidden>هذه بيانات تجريبية لعرض شكل الصفحة.</div>
+ <main id="app" aria-live="polite"></main>
+ <footer>نحفظ نتائج اللعب برمز الطفل فقط، بدون اسم أو صورة. الأحاديث مختارة من مصادر موثقة.</footer>
+</div>
+
+<script>
+(function () {
+ "use strict";
+
+ var LEVELS = {
+ amanah: {
+ title: "نزهة العم رشاد",
+ value: "الأمانة",
+ story: "دعا العم رشاد طفلك إلى نزهة، ثم ذهب ليتوضأ لصلاة العصر وطلب منه أن يحفظ سلة الفطائر من الطيور حتى يعود."
+ }
+ };
+
+ var RESULTS = {
+ excellent: {
+ label: "حفظ الأمانة", tone: "good", rank: 3,
+ what: "بقي قرب السلة طوال غياب العم رشاد، ولم يقترب أي طائر من الفطائر.",
+ tip: "امدحوا الفعل نفسه: «أعجبني أنك بقيت عند السلة حتى رجع العم رشاد». ثم اسألوه: ما الأشياء التي نؤتمن عليها في البيت؟"
+ },
+ neutral: {
+ label: "حفظها مع ابتعاد قصير", tone: "mid", rank: 2,
+ what: "ابتعد عن السلة قليلًا فاقترب منها طائر، لكنه عاد قبل أن يصل الطائر إلى الفطائر.",
+ tip: "اشكروه على رجوعه، ثم تحدثوا بهدوء: لماذا نبقى قرب ما اؤتمنّا عليه حتى لو طال الانتظار؟ وأعطوه مهمة صغيرة يحافظ عليها هذا الأسبوع."
+ },
+ poor: {
+ label: "يحتاج تذكيرًا بالأمانة", tone: "soft", rank: 1,
+ what: "ابتعد عن السلة مدة طويلة، فوصل الطائر إلى الفطائر وتأثرت النزهة.",
+ tip: "لا لوم ولا عتاب؛ الهدف أن يتعلم. احكوا له موقفًا بسيطًا عن الأمانة، وكلّفوه بمسؤولية صغيرة (كالعناية بنبتة)، وامدحوه حين يتمها."
+ }
+ };
+
+ var params = new URLSearchParams(location.search);
+ var childId = (params.get("child_id") || "").trim();
+ var isDemo = params.get("demo") === "1";
+ var apiBase = (params.get("api") || location.origin).replace(/\/+$/, "");
+ var app = document.getElementById("app");
+
+ function el(tag, cls, text) {
+ var n = document.createElement(tag);
+ if (cls) n.className = cls;
+ if (text != null) n.textContent = text;
+ return n;
+ }
+ var dateFmt;
+ try {
+ dateFmt = new Intl.DateTimeFormat("ar-SA-u-ca-gregory-nu-latn", { day: "numeric", month: "long", year: "numeric", hour: "numeric", minute: "2-digit" });
+ } catch (e) { dateFmt = null; }
+ function fmtDate(s) {
+ var d = new Date(s);
+ if (isNaN(d)) return s || "";
+ return dateFmt ? dateFmt.format(d) : d.toLocaleString();
+ }
+ function result(c) { return RESULTS[c] || { label: "نتيجة غير معروفة", tone: "mid", rank: 0, what: "", tip: "" }; }
+ function badge(c) { var r = result(c); return el("span", "badge t-" + r.tone, r.label); }
+
+ function showState(title, msg, retry) {
+ app.innerHTML = "";
+ var c = el("section", "card state");
+ c.appendChild(el("h3", null, title));
+ c.appendChild(el("p", null, msg));
+ if (retry) {
+ var b = el("button", "retry", "حاول مرة أخرى");
+ b.type = "button";
+ b.addEventListener("click", function () { load(0); });
+ c.appendChild(b);
+ }
+ app.appendChild(c);
+ }
+ function showLoading(msg) {
+ app.innerHTML = "";
+ var c = el("section", "card");
+ c.appendChild(el("p", "story", msg || "جارٍ تحميل التقرير…"));
+ for (var i = 0; i < 4; i++) { var s = el("div", "skel"); s.style.width = (90 - i * 15) + "%"; c.appendChild(s); }
+ app.appendChild(c);
+ }
+
+ function render(data) {
+ var events = (data && Array.isArray(data.events) ? data.events : []).filter(function (e) { return e && e.classification; });
+ events.sort(function (a, b) { return new Date(b.timestamp) - new Date(a.timestamp); });
+ app.innerHTML = "";
+
+ if (!events.length) {
+ showState("لم يلعب طفلك بعد", "بعد أن ينهي طفلك أول مرحلة في أثر ستظهر هنا نتيجته ونصائح للحديث معه.", false);
+ return;
+ }
+
+ var latest = events[0];
+ var stats = el("section", "stats");
+ [["مرات اللعب", String(events.length)],
+ ["آخر نتيجة", result(latest.classification).label],
+ ["آخر لعب", fmtDate(latest.timestamp)]].forEach(function (p) {
+ var s = el("div", "stat");
+ s.appendChild(el("div", "k", p[0]));
+ var v = el("div", "v", p[1]);
+ if (p[0] !== "مرات اللعب") v.style.fontSize = "16px";
+ s.appendChild(v);
+ stats.appendChild(s);
+ });
+ app.appendChild(stats);
+
+ var groups = {}, order = [];
+ events.forEach(function (e) {
+ var k = e.situation_id || "other";
+ if (!groups[k]) { groups[k] = []; order.push(k); }
+ groups[k].push(e);
+ });
+
+ app.appendChild(el("h2", "sec", "المراحل"));
+ order.forEach(function (k) {
+ var list = groups[k], last = list[0], lvl = LEVELS[k] || { title: k, value: "", story: "" };
+ var r = result(last.classification);
+ var card = el("article", "card");
+
+ var head = el("div", "card-head");
+ var h = el("h3", null, lvl.title);
+ head.appendChild(h);
+ if (lvl.value) head.appendChild(el("span", "value", "قيمة " + lvl.value));
+ card.appendChild(head);
+ if (lvl.story) card.appendChild(el("p", "story", lvl.story));
+
+ var b1 = el("div", "block");
+ var l1 = el("div", "lbl", "آخر مرة ");
+ b1.appendChild(l1);
+ var p1 = el("p");
+ p1.appendChild(badge(last.classification));
+ b1.appendChild(p1);
+ if (r.what) { var w = el("p", null, r.what); w.style.marginTop = "6px"; b1.appendChild(w); }
+ card.appendChild(b1);
+
+ if (r.tip) {
+ var b2 = el("div", "block");
+ b2.appendChild(el("div", "lbl", "كيف تكملون الحديث معه"));
+ b2.appendChild(el("p", null, r.tip));
+ card.appendChild(b2);
+ }
+
+ if (last.hadith_text && last.hadith_source) {
+ var b3 = el("div", "block");
+ b3.appendChild(el("div", "lbl", "الحديث الذي سمعه في اللعبة"));
+ var hd = el("p", "hadith", last.hadith_text);
+ hd.appendChild(el("span", "src", "المصدر: " + last.hadith_source));
+ b3.appendChild(hd);
+ card.appendChild(b3);
+ }
+
+ if (list.length > 1) {
+ var b4 = el("div", "block");
+ b4.appendChild(el("div", "lbl", "كل المحاولات"));
+ var ol = el("ol", "history");
+ list.forEach(function (e) {
+ var li = el("li");
+ var t = el("time", null, fmtDate(e.timestamp));
+ if (e.timestamp) t.setAttribute("datetime", e.timestamp);
+ li.appendChild(t);
+ li.appendChild(badge(e.classification));
+ ol.appendChild(li);
+ });
+ b4.appendChild(ol);
+ card.appendChild(b4);
+ }
+ app.appendChild(card);
+ });
+ }
+
+ var MAX_TRIES = 6;
+ function load(attempt) {
+ showLoading(attempt > 0 ? "الخادم يستيقظ، لحظات من فضلك…" : null);
+ var ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+ var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 20000);
+ fetch(apiBase + "/api/child-report?child_id=" + encodeURIComponent(childId), { signal: ctrl ? ctrl.signal : undefined, cache: "no-store" })
+ .then(function (res) {
+ clearTimeout(timer);
+ if (res.status === 404) return { events: [] };
+ if (!res.ok) throw new Error("HTTP " + res.status);
+ return res.json();
+ })
+ .then(render)
+ .catch(function () {
+ clearTimeout(timer);
+ if (attempt + 1 < MAX_TRIES) { setTimeout(function () { load(attempt + 1); }, 5000); return; }
+ showState("تعذّر تحميل التقرير", "تأكدوا من الاتصال بالإنترنت ثم حاولوا مرة أخرى.", true);
+ });
+ }
+
+ function demoData() {
+ var now = Date.now(), day = 86400000;
+ return { child_id: "demo", events: [
+ { situation_id: "amanah", classification: "excellent", timestamp: new Date(now - 2 * 3600000).toISOString(),
+ hadith_text: "(نص الحديث المعتمد يظهر هنا كما يرسله الخادم)", hadith_source: "(المصدر)" },
+ { situation_id: "amanah", classification: "neutral", timestamp: new Date(now - day).toISOString() },
+ { situation_id: "amanah", classification: "poor", timestamp: new Date(now - 3 * day).toISOString() }
+ ]};
+ }
+
+ if (isDemo) {
+ document.getElementById("demoNote").hidden = false;
+ render(demoData());
+ return;
+ }
+ if (!childId) {
+ showState("افتحوا هذه الصفحة من داخل اللعبة", "من قائمة الإعدادات في أثر اضغطوا زر «قائمة الوالدين»، فتفتح الصفحة برمز طفلكم.", false);
+ return;
+ }
+ var code = document.getElementById("code");
+ code.textContent = "رمز الطفل: " + childId;
+ code.hidden = false;
+ load(0);
+})();
+</script>
+</body>
+</html>
