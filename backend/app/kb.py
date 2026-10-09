@@ -45,7 +45,7 @@ def _load_hadiths():
         str(value).strip() if value is not None else ""
         for value in headers
     ]
-print(f"ATHAR DEBUG: headers = {headers}")
+        print(f"ATHAR DEBUG: headers = {headers}")
     data = []
 
     for values in rows:
