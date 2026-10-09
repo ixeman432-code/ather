@@ -87,6 +87,8 @@ def _load_hadiths():
 
 
 HADITHS = _load_hadiths()
+print(f"ATHAR DEBUG: loaded hadiths = {len(HADITHS)}")
+print(f"ATHAR DEBUG: Excel exists = {EXCEL_PATH.exists()}")
 
 
 def get_hadith_pool(classification, child_age, language="ar"):
