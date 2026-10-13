@@ -13,7 +13,7 @@ EXCEL_PATH = (
     / "raw"
     / "hadith_data.xlsx"
 )
-
+print(f"ATHAR DEBUG: Excel path = {EXCEL_PATH}")
 RESULT_MAP = {
     "excellent": "ثناء",
     "neutral": "تشجيع",
