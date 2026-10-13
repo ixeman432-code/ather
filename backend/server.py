@@ -401,11 +401,15 @@ def next_scenario(request: NextScenarioRequest):
     )
 
     if len(lines) < 2:
-        lines = _fallback_lines(classification, language, gender)
+               lines = _fallback_lines(classification, language, gender)
+    hadith_text = hadith["text"].strip()
+    prefix = "قال رسول الله ﷺ:"
+    if not hadith_text.startswith(prefix):
+                hadith_text = f"{prefix} {hadith_text}"
 
     return {
         "lines": lines[:3],
-        "hadith_text": hadith["text"],
+        "hadith_text": hadith_text,
         "hadith_source": hadith["source"],
     }
 
