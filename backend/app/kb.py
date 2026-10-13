@@ -60,7 +60,7 @@ def _load_hadiths():
         if not text or not source:
             continue
 
-        target_age = row.get("العمر المستهدف")
+        target_age = row.get("العمر إلى")
 
         try:
             target_age = int(float(target_age))
