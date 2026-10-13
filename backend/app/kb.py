@@ -51,7 +51,7 @@ def _load_hadiths():
     for values in rows:
         row = dict(zip(headers, values))
 
-        if str(row.get("معتمد؟") or "").strip() != "نعم":
+        if str(row.get("الحالة") or "").strip() != "نعم":
             continue
 
         text = str(row.get("نص العرض") or "").strip()
